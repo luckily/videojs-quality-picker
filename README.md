@@ -10,7 +10,7 @@ NOTE: In this project, quality can refer to:
 
 Plugin works with video.js 5.0 and newer.
 
-
+Use `grunt build̀`to build the dist scripts.
 
 ## Make a tech / source handler compatible
 
