@@ -8,7 +8,7 @@ NOTE: In this project, quality can refer to:
 
 ## Installation
 
-Plugin works with video.js 5.0 and newer.
+Plugin works with video.js 5.0 to 5.5.x.
 
 Use `grunt build̀`to build the dist scripts.
 
