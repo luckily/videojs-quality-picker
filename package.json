@@ -1,13 +1,13 @@
 {
   "name": "videojs-quality-picker",
   "author": {
-    "name": "StreamRoot",
+    "name": "Streamroot",
     "email": "contact@streamroot.io"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "./dist/vjs-quality-picker.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
