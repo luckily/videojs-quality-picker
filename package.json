@@ -21,9 +21,13 @@
     "babelify": "^7.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
     "grunt": "^0.4.5",
     "grunt-browserify": "4.0.1",
     "grunt-contrib-uglify": "^1.0.0",
-    "matchdep": "0.3.0"
+    "matchdep": "0.3.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
