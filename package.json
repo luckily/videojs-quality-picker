@@ -10,7 +10,8 @@
   "version": "0.0.3",
   "main": "./dist/vjs-quality-picker.js",
   "scripts": {
-    "build": "webpack -p"
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack-dev-server --open"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
