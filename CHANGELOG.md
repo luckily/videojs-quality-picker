@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.0.0]
 ### Added
 - Working example running behind a webpack-dev-server.
+- Add circle.yml to enable CircleCI to test builds.
 
 ### Changed
 - Goes from Grunt to Webpack.
+- Goes from jshint to eslint.
 
 ## [0.0.3] - 2016-06-24
 ### Changed
