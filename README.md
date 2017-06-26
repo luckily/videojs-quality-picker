@@ -1,20 +1,30 @@
 # Video.js quality picker
 
-Adds quality picker menus to video.js which allows users to perform manual quality selection for multi-bitrate video, or multi-language audio / subtitles.
+Adds quality picker menus to video.js which allows users to perform manual quality selection for multi-bitrate video, or multi-language audio / subtitles. Plugin works with video.js v5.x.
 
 NOTE: In this project, quality can refer to:
  - a specific video / audio bitrate (or auto selection)
  - a specific audio / subtitle language (or disabled subtitles)
 
-## Installation
+## Development
 
-Plugin works with video.js 5.0 and newer.
+1. `npm install` -- install the dependencies.
+1. `grunt build` -- build the quality picker.
 
-Use `grunt build̀`to build the dist scripts.
+## Usage
 
-## Make a tech / source handler compatible
+This plugin can't be used as a standalone library. It requires manual integration with video.js playback `Tech` or `Source handler`. Currently it's integrated with [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler).
 
-#### How it works
+Video.js requires explicit plugin initialization, so after video.js is created, initialize plugin:
+
+```javascript
+var player = videojs('example-video', options);
+player.qualityPickerPlugin(); // IMPORTANT: Initialization of quality picker plugin, it won't work otherwise.
+```
+
+## Integration with video.js `Tech` or `Source handler`
+
+### How it works
 
 The plugin listens to the custom event `loadedqualitydata` fired by player's tech / source handler.
 
@@ -24,8 +34,7 @@ The tech must:
 - Implement a callback function for the click action on the quality picker
 - Trigger a custom tech event `loadedqualitydata`, with a payload which format is described below
 
-
-### Expected format
+#### Expected payload format
 
 Here is expected payload structure:
 ```javascript
@@ -39,7 +48,7 @@ Here is expected payload structure:
 }
 ```
 
-NOTES:
+**NOTES**:
 - In the following, **track type** refers to the enum: `"video" | "audio" | "subtitle"`.
 - it's not mandatory to pass an array of Quality for every track type, it can be undefined. No quality picker button will be added for this track type.
 - If the length of a Quality array is `<= 1`, no quality picker button will be added for its track type.
@@ -50,11 +59,9 @@ NOTES:
 
 This callback function will be called with the Quality id and the the track type as arguments. Its role is to effectively perform the quality change on the player
 
-
-
 #### Quality
 
-###### Examples
+##### Representation examples
 
 ```javascript
 {
@@ -72,7 +79,7 @@ This callback function will be called with the Quality id and the the track type
 }
 ```
 
-###### Properties
+##### Properties
 
 property    | type  |description
 ------------|-------|-----------------------------------
@@ -80,8 +87,7 @@ id          | Any   | Unique identifier for the quality. Can be an integer (leve
 label       | String | The text that will be displayed to identify this quality in the drop down menu
 selected    | Boolean | Should be true for ONE quality ONLY: the one that is currently played by the player
 
-### Hls.js Example
-
+### Hls.js integration example
 
 ```javascript
 
@@ -146,4 +152,4 @@ selected    | Boolean | Should be true for ONE quality ONLY: the one that is cur
 
 ## List of supported video.js plugins & source handlers
 
-* [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler) -- adds HLS playback support to video.js 5.0+ using Dailymotion's hls.js library.
+* [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler) -- adds HLS playback support to video.js 5.x using Dailymotion's hls.js library.
