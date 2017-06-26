@@ -1,4 +1,4 @@
-# Video.js quality picker
+# Video.js v5.x quality picker
 
 Adds quality picker menus to video.js which allows users to perform manual quality selection for multi-bitrate video, or multi-language audio / subtitles. Plugin works with video.js v5.x.
 
