@@ -1,5 +1,7 @@
 # Video.js v5.x quality picker
 
+[![CircleCI](https://circleci.com/gh/streamroot/videojs-quality-picker/tree/master.svg?style=shield&circle-token=f54f17f600368beab20f9348b181073d256ca882)](https://circleci.com/gh/streamroot/videojs-quality-picker/tree/master)
+
 Adds quality picker menus to video.js which allows users to perform manual quality selection for multi-bitrate video, or multi-language audio / subtitles. Plugin works with video.js v5.x.
 
 NOTE: In this project, quality can refer to:
