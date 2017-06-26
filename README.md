@@ -11,7 +11,9 @@ NOTE: In this project, quality can refer to:
 ## Development
 
 1. `npm install` -- install the dependencies.
-1. `grunt build` -- build the quality picker.
+1. `npm run lint` -- run lint check.
+1. `npm run build` -- build the quality picker.
+1. `npm run dev` -- starts Webpack dev server.
 
 ## Usage
 
