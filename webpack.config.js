@@ -1,10 +1,10 @@
 const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-    context: __dirname + '/lib',
+    context: `${__dirname}/lib`,
     entry: './vjs-quality-picker',
     output: {
-        path: __dirname + isDev ? '/example' : '/dist',
+        path: isDev ? `${__dirname}/example` : `${__dirname}/dist`,
         filename: 'vjs-quality-picker.js'
     },
     module: {
