@@ -94,7 +94,8 @@ selected    | Boolean | Should be true for ONE quality ONLY: the one that is cur
 ### Hls.js integration example
 
 ```javascript
-
+    require("videojs-quality-picker");
+    
     // hls.js init
     var hls = new Hls(config);
     hls.on(Hls.Events.MANIFEST_PARSED, onManifestParsed); // Listen to the event MANIFEST_PARSED, to get the quality list.
@@ -153,7 +154,13 @@ selected    | Boolean | Should be true for ONE quality ONLY: the one that is cur
         }
     }
 ```
+**Don't forget to initialize the plugin after initializing video.js
+
+```javascript
+var player = videojs('example-video');
+player.qualityPickerPlugin();
+```
 
 ## List of supported video.js plugins & source handlers
 
-* [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler) -- adds HLS playback support to video.js 5.x using Dailymotion's hls.js library.
+* Quality picker if fully integrated into [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler), which adds HLS playback support to video.js 5.x using Dailymotion's hls.js library.
