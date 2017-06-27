@@ -17,7 +17,9 @@ NOTE: In this project, quality can refer to:
 
 ## Usage
 
-This plugin can't be used as a standalone library. It requires manual integration with video.js playback `Tech` or `Source handler`. Currently it's integrated with [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler).
+This plugin can't be used as a standalone library. It requires manual integration with video.js playback `Tech` or `Source handler`. Currently it's integrated into [videojs5-hlsjs-source-handler](https://github.com/streamroot/videojs5-hlsjs-source-handler).
+
+To integrate quality picker into your project include it first by running `npm install --save videojs-quality-picker`. Then modify video.js `Tech` or `SourceHandler`(or create your own one). See integration example below.
 
 Video.js requires explicit plugin initialization, so after video.js is created, initialize plugin:
 
@@ -93,8 +95,10 @@ selected    | Boolean | Should be true for ONE quality ONLY: the one that is cur
 
 ### Hls.js integration example
 
+Add `videojs-quality-picker` to your project by running `npm install --save videojs-quality-picker`.
+
 ```javascript
-    require("videojs-quality-picker");
+    require("videojs-quality-picker"); // include videojs-quality-picker
     
     // hls.js init
     var hls = new Hls(config);
