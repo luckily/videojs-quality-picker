@@ -15,8 +15,8 @@ module.exports = {
       }]
     },
     devServer: isDev ? {
-      contentBase: './example',
+      contentBase: __dirname,
       inline: true,
-      port: 7979,
+      port: 8080,
     }: null,
 };
