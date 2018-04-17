@@ -1,3 +1,4 @@
+/* eslint-disable */
 const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
     },
     devServer: isDev ? {
       contentBase: __dirname,
+      publicPath: '/dist/',
       inline: true,
       port: 8080,
     }: null,
