@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Too early access of `player.tech_` on VJS6+.
+- Improper CSS handling of quality button on VJS6+.
 
 ## [1.0.0]
 ### Added
